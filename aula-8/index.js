@@ -6,3 +6,4 @@ console.log(nome);
 let idade = 12;
 //let idade = 24;
 console.log(idade);
+
