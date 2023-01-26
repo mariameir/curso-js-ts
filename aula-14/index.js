@@ -23,8 +23,35 @@ console.log(num3.toFixed(2));
 const num4 = 6;
 console.log(Number.isInteger(num4));
 
-//
+//como saber se uma operacao e not a number ou nao (true or false)
+let temp = num1 * 'ola';
+console.log(Number.isNaN(temp));
 
+//IEEE 754-2008
+
+let n1 = 0.7 //number
+let n2 = 0.1 // number
+
+console.log(n1+n2); //imprecisao
+
+// n1 += n2    -->          n1 = n1+n2
+n1 += n2; //0.8
+n1 += n2; //0.9
+n1 += n2; //1.0
+n1 += n2; //1.1
+n1 += n2; //1.2
+n1 += n2; //1.3
+n1 += n2; //1.4
+n1 += n2; //1.5
+n1 += n2; //1.6
+n1 += n2; //1.7
+n1 += n2; //1.8
+n1 += n2; //1.9
+n1 += n2; //2.0
+n1 = Number(n1.toFixed(2));
+
+console.log(n1);
+console.log(Number.isInteger(n1));
 
 
 
