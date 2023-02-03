@@ -21,7 +21,6 @@ function getDiaSemanaTexto(diaSemana) {
   }
 }
 
-
 function getMesTexto(mesTexto) {
   let mesTexto1;
   switch (mesTexto) {
@@ -71,7 +70,11 @@ function zeroAEsquerda (num){
 const hora = zeroAEsquerda(data.getHours());
 const minuto = zeroAEsquerda(data.getMinutes());
 
-console.log(`${diaSemanaTexto}, ${diaMes} de ${mesTexto} de ${ano
- } ${hora}:${minuto}`);
+var output = document.getElementById("output");
+output.innerHTML = `${diaSemanaTexto}, ${diaMes} de ${mesTexto} de ${ano} ${hora}:${minuto}`;
 
- 
+
+//mesmo resultado mas em 3 linhas de codigo kkkk
+// const h1 = document.querySelector('.container h1');
+// const data = new Date();
+// h1.innerHTML = data.toLocaleString('pt-BR',{ dateStyle: 'full', timeStyle: 'short'});
