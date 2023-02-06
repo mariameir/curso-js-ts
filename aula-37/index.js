@@ -16,7 +16,7 @@ for(let index in nome ){
 
 console.log("_______________________")
 
-
+ 
 // com for of o objeto n e iteravel
 for(let valor of nome){
     console.log(valor)
