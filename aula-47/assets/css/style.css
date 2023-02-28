@@ -47,4 +47,9 @@ a {
 
 .relogio{
   font-size: 1.7em;
+  text-shadow:  0em 0em 1em gold;
+}
+
+.pausado{
+  color:rgb(215, 210, 210);
 }
