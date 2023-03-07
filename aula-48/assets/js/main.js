@@ -7,7 +7,7 @@ function criaLi() { //funcao para criar lista de tarefas
     return li;
 }
 
-inputTarefa.addEventListener('keypress', function (e) { //funcao q mostra quando uma tecla foi precio nada e qual
+inputTarefa.addEventListener('keypress', function (e) { //funcao q mostra quando uma tecla foi pressionada e qual
     if (e.keyCode === 13) {
         if (!inputTarefa.value) return;
         criaTarefa(inputTarefa.value);
