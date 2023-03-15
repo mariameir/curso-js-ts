@@ -14,7 +14,7 @@ function funcao1() {
     for (let argumento of arguments) {
         total += argumento;
     }
-    console.log(total)
+    console.log(total);
 }
 funcao1(1, 2, 3, 4);
 
@@ -36,10 +36,37 @@ funcao3(2, 2, 2);
 function funcao4({ nome, sobrenome, idade }) {
     console.log(nome, sobrenome, idade);
 }
-funcao4({ nome: 'maria', sobrenome: 'meir', idade: 24 });
+funcao4({ nome: 'maria', sobrenome: 'meir', idade: 24 }); //enviando um objetolietral como um argumento
 
-//desestruturacao do array
+//desestruturacao de array
 function funcao5([valor1, valor2, valor3]) {
     console.log(valor1, valor2, valor3);
 }
 funcao5(['Maria Meir', 'Souza', 30]);
+
+//                                   ... rest oparator
+function conta(operador, acumulador, ...numeros) {
+    for (let numero of numeros){
+        if (operador === "+") acumulador += numero;
+        if (operador === "-") acumulador -= numero;
+        if (operador === "/") acumulador /= numero;
+        if (operador === "*") acumulador *= numero;
+    }
+    console.log(acumulador)
+}
+conta("+",0,10,2,3);
+
+// mudando o codigo anterior para uma function expression. Ao utilizar arrow function, desabilitamos o 
+// 'arguments'
+
+const conta1 = (operador1, acumulador1, ...numeros1) => {
+    console.log(arguments);
+};
+conta1("+",0,10,2,3);
+
+//outra forma de "declarar" arguments e que pode ser utlizado ate com arrow function
+//... args = parametros indeterminados 
+const argumentos = (...args) => {
+    console.log(args);
+};
+conta1("+",0,10,2,3);
