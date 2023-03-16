@@ -14,5 +14,4 @@ const funcao2 = retornaFuncao('Meir');
 console.dir(funcao2);
 console.dir(funcao);
 
-
 console.log(funcao(), funcao2());
